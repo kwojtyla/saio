@@ -79,8 +79,6 @@ src/
 
 ### 🖥️ Tecnologias/Ferramentas
 
-- **Next.js (App Router):** escolhi o Next.js com App Router pela sua maturidade e pelo conjunto de funcionalidades que ele oferece nativamente, como roteamento baseado em sistema de arquivos, Server Components e o sistema de cache integrado. Isso permitiu buscar e filtrar produtos diretamente no servidor, reduzindo o JavaScript enviado ao cliente e melhorando a performance da aplicação.
-
 - **Tailwind CSS v4:** utilizei o Tailwind como solução de estilização pela agilidade no desenvolvimento e pela consistência visual que ele proporciona. A versão 4, ainda em fase de evolução, traz melhorias significativas de performance no build.
 
 - **shadcn/ui:** optei pelo shadcn/ui para os componentes de UI por ser uma coleção de componentes acessíveis e totalmente customizáveis, que vivem diretamente no código do projeto. Isso facilita a manutenção e permite adaptações sem depender de uma biblioteca externa com sua própria camada de abstração.
@@ -98,5 +96,5 @@ src/
 ---
 
 <p align="center">
-    Desenvolvido com 💚 por <a href="https://karolwojtyla.dev">Karol Wojtyla</a>
+    Desenvolvido com 💙 por <a href="https://karolwojtyla.dev">Karol Wojtyla</a>
 </p>
