@@ -18,7 +18,7 @@ export const PAGES = [
 ];
 
 const createSiteConfig = () => {
-  const url = "https://karolwojtyla.dev";
+  const url = "https://saiocommerce.vercel.app";
   const links = {
     x: "https://www.saio.app/x",
     instagram: "https://www.saio.app/instagram",
@@ -29,10 +29,8 @@ const createSiteConfig = () => {
   };
 
   return {
-    name: "Karol Wojtyla | Software Engineer",
-    description:
-      "Engenheiro de Software especialista em transformar experiências digitais com tecnologia",
-    ogImage: `${url}/og.jpg`,
+    name: "SAIO Commerce",
+    description: "Teste técnico submetido para a empresa SAIO",
     links,
     url,
   };
