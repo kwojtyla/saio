@@ -30,7 +30,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       </CardHeader>
       <CardFooter className="flex">
         <span className="text-2xl font-bold">{formatToReal(product.price)}</span>
-        <Button className="ml-auto">
+        <Button className="ml-auto" aria-label={`Comprar ${product.title}`}>
           <ShoppingCart />
           Comprar
         </Button>

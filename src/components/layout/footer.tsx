@@ -17,9 +17,9 @@ export default function FooterSection() {
         </Link>
 
         <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
-          {PAGES.map((link, index) => (
+          {PAGES.map((link) => (
             <Link
-              key={index}
+              key={link.title}
               href={link.href}
               className="text-accent hover:text-muted-foreground block duration-150"
             >

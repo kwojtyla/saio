@@ -1,6 +1,5 @@
 import { Product } from "@/types/products.type";
-import { cacheLife } from "next/cache";
-import { cacheTag } from "next/cache";
+import { cacheTag, cacheLife } from "next/cache";
 
 export async function getProducts(page = 1, perPage = 6, category?: string, priceRange?: string) {
   "use cache";
