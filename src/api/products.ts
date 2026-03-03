@@ -1,18 +1,8 @@
 import { Product } from "@/types/products.type";
-import { cacheTag, cacheLife } from "next/cache";
-
-const API_URL = process.env.API_URL ?? "https://fakestoreapi.com";
+import { mockProducts } from "./mock-products";
 
 export async function getProducts(page = 1, perPage = 6, category?: string, priceRange?: string) {
-  "use cache";
-  cacheTag("products");
-  cacheLife("hours");
-
-  const response = await fetch(`${API_URL}/products`);
-  if (!response.ok)
-    throw new Error(`Failed to fetch products: ${response.status} ${response.statusText}`);
-
-  const all: Product[] = await response.json();
+  const all: Product[] = mockProducts;
 
   let filtered = all;
 
@@ -45,14 +35,11 @@ export async function getProducts(page = 1, perPage = 6, category?: string, pric
     perPage,
   };
 }
+
 export async function getProduct(id: number): Promise<Product> {
-  "use cache";
-  cacheTag(`product-${id}`);
-  cacheLife("days");
+  const product = mockProducts.find((p) => p.id === id);
 
-  const response = await fetch(`${API_URL}/products/${id}`);
+  if (!product) throw new Error(`Product with id ${id} not found`);
 
-  if (!response.ok)
-    throw new Error(`Failed to fetch product ${id}: ${response.status} ${response.statusText}`);
-  return response.json();
+  return product;
 }
