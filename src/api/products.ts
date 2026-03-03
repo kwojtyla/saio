@@ -8,7 +8,7 @@ export async function getProducts(page = 1, perPage = 6, category?: string, pric
   cacheTag("products");
   cacheLife("hours");
 
-  const response = await fetch(`${API_URL}/products`, { cache: "no-store" });
+  const response = await fetch(`${API_URL}/products`);
   if (!response.ok)
     throw new Error(`Failed to fetch products: ${response.status} ${response.statusText}`);
 
@@ -50,7 +50,8 @@ export async function getProduct(id: number): Promise<Product> {
   cacheTag(`product-${id}`);
   cacheLife("days");
 
-  const response = await fetch(`${API_URL}/products/${id}`, { cache: "no-store" });
+  const response = await fetch(`${API_URL}/products/${id}`);
+
   if (!response.ok)
     throw new Error(`Failed to fetch product ${id}: ${response.status} ${response.statusText}`);
   return response.json();
